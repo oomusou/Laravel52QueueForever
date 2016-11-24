@@ -15,4 +15,16 @@ class MailServiceTest extends TestCase
         /** assert */
         $this->assertTrue(true);
     }
+
+    /** @test */
+    public function 由queue寄送信件()
+    {
+        /** arrange */
+
+        /** act */
+        App::call(MailService::class . '@mailByQueue');
+
+        /** assert */
+        $this->assertTrue(true);
+    }
 }
