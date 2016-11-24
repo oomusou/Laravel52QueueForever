@@ -15,4 +15,13 @@ class MailService
             $message->to('oomusou@gmail.com');
         });
     }
+
+    public function mailByQueue()
+    {
+        Mail::queue('welcome', [], function (Message $message) {
+            $message->sender('oomusou@gmail.com');
+            $message->subject('Laravel 5.2 mail by Queue');
+            $message->to('oomusou@gmail.com');
+        });
+    }
 }
